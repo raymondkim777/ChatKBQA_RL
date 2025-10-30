@@ -210,7 +210,7 @@ def main(config):
             'env_vars': {
                 'TOKENIZERS_PARALLELISM': 'true', 
                 'NCCL_DEBUG': 'WARN', 
-                'HF_AUTH_TOKEN': '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',
+                'HF_AUTH_TOKEN': os.getenv("HF_AUTH_TOKEN"),
             }
         })
 
