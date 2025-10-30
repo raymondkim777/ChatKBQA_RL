@@ -14,7 +14,8 @@ others
 condor_scripts
 .bash_history
 logs
-exp_logs
+exp_log
+exp_log/*
 *.key
 *pyserini_index
 corpus.jsonl

@@ -43,6 +43,11 @@ class DataParallelPPOCritic(BasePPOCritic):
         self.critic_module = critic_module
         self.critic_optimizer = critic_optimizer
         self.use_remove_padding = self.config.model.get('use_remove_padding', False)
+
+        # create critic
+        print("printing critic config")
+        print(f"self.config: {self.config}")
+
         print(f'Critic use_remove_padding={self.use_remove_padding}')
         print(f'Critic ppo_mini_batch_size={self.config.ppo_mini_batch_size}')
         print(f'Critic ppo_micro_batch_size={self.config.ppo_micro_batch_size}')

@@ -1,0 +1,61 @@
+<|im_start|>system
+    You are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.
+<|im_end|>
+
+<|im_start|>user
+    You are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base. The Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.
+    For example:
+
+    <think>
+    [thinking process]
+    </think>
+    <answer>
+    {
+        "query": [s-expression logical form]
+    } 
+    </answer>. 
+
+    Note: The query should be an S-expression logical form.
+    Here's the user query:
+        (INSERT QUERY)
+<|im_end|>
+
+<|im_start|>assistant
+    Let me write the S-expression query with reasoning. 
+    <think>
+
+
+
+
+
+<|im_start|>system
+    You are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.
+<|im_end|>
+
+<|im_start|>user
+    The Assistant is an S-expression logical form query writing expert. The Assistant's task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base. An S-expression uses LISP syntax with logical operators as functions and knowledge base entities/relations as arguments. A knowledge base entity ID starts with "m." and then has the unique ID. A knowledge base relation ID is of the form "domain.type.property" corresponding to the domains and categories of the knowledge base. The Assistant's generated logical form should not contain raw entity IDs of the form "m.00000" or relation IDs of the form "domain.type.property". Instead, the Assistant should use placeholders for each ID field that best represents the user's query information. 
+    For example, for the user query "what is the name of justin bieber brother", a generated query could look like this:
+
+    ( AND ( JOIN [ people , person , gender ] [ Male ] ) ( JOIN ( R [ people , sibling relationship , sibling ] ) ( JOIN ( R [ people , person , sibling s ] ) [ Justin Bieber ] ) ) )
+
+    The Assistant should consider which logical form skeleton best matches the logical relationship of the user query, and justify the best one. The Assistant should clearly reason through why the chosen relations are necessary, and how many times to use each relation. The Assistant should consider varying levels of logical form complexity, and justify which complexity best matches the user query.
+
+    The Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags. 
+    For example:
+
+    <think>
+    [thinking process]
+    </think>
+    <answer>
+    {
+        "query": [s-expression logical form]
+    } 
+    </answer>. 
+
+    Here's the user query:
+        (INSERT QUERY)
+<|im_end|>
+
+<|im_start|>assistant
+    Let me write the S-expression query with reasoning. 
+    <think>

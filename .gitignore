@@ -42,3 +42,7 @@ code/extra
 
 # other
 *.key
+
+
+# env
+.env

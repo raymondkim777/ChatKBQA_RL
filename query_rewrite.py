@@ -87,8 +87,9 @@ def rewrite_query(query: str, api_url: str = "http://localhost:8000/v1/chat/comp
 def main():
     parser = argparse.ArgumentParser(description="Query rewriting using vLLM API")
     parser.add_argument("--query", type=str, required=True, help="The query to rewrite")
-    parser.add_argument("--api_url", type=str, default="http://localhost:8000/v1/chat/completions",
-                      help="URL of the vLLM API server (default: http://localhost:8000/v1/chat/completions)")
+    parser.add_argument(
+        "--api_url", type=str, default="http://localhost:8000/v1/chat/completions",
+        help="URL of the vLLM API server (default: http://localhost:8000/v1/chat/completions)")
     
     args = parser.parse_args()
     
