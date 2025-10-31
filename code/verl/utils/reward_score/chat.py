@@ -11,7 +11,7 @@ import requests
 sys.path.append('./')
 
 
-API_LINK = 'asdfasdfasdf'
+API_LINK = 'https://floretta-eruptible-noe.ngrok-free.dev/execute'
 
 
 def extract_solution(solution_str):
@@ -119,7 +119,7 @@ def calculate_answer_score(pred_sexpr, answer_entity, do_print=False):
     # if API has error, returns empty JSON object (CHECK)
     if 'retrieved' not in response.json().keys():
         if do_print:
-            print(f"[Error] Error in executing SPARQL: {e}")
+            print(f"[Error] Error in executing SEXPR: {pred_sexpr}")
         answers = []
         answer_score = 0
     else:

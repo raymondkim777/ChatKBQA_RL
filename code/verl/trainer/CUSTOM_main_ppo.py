@@ -17,6 +17,7 @@ Note that we don't combine the main with ray_trainer as ray_trainer is used by o
 
 import sys
 import os
+from dotenv import load_dotenv
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 project_root = os.path.dirname(os.path.dirname(current_dir))  
@@ -210,7 +211,6 @@ def main(config):
             'env_vars': {
                 'TOKENIZERS_PARALLELISM': 'true', 
                 'NCCL_DEBUG': 'WARN', 
-                'HF_AUTH_TOKEN': os.getenv("HF_AUTH_TOKEN"),
             }
         })
 
@@ -243,7 +243,7 @@ def main_task(config):
     }
     
     tokenizer = AutoTokenizer.from_pretrained(
-        config.actor_rollout_ref.model.path,  # meta-llama/Llama-2-7b-hf
+        config.actor_rollout_ref.model.path,  # meta-llama/Llama-3.2-3B-Instruct
         use_fast=True,  # False
         padding_side="right", # training with left-padded tensors in fp16 precision may cause overflow
         **config_kwargs

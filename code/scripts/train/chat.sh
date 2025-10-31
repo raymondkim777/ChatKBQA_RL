@@ -1,5 +1,6 @@
 export HYDRA_FULL_ERROR=1
-export CUDA_VISIBLE_DEVICES=0,1,2,3
+export CUDA_VISIBLE_DEVICES=0
+# export CUDA_VISIBLE_DEVICES=0,1,2,3
 
 PROJECT_NAME=chatkbqa
 
@@ -36,7 +37,7 @@ python3 -m verl.trainer.CUSTOM_main_ppo \
     trainer.logger=['console'] \
     +trainer.val_before_train=False \
     trainer.default_hdfs_dir=null \
-    trainer.n_gpus_per_node=4 \
+    trainer.n_gpus_per_node=1 \
     trainer.nnodes=1 \
     trainer.save_freq=200 \
     trainer.test_freq=20 \
