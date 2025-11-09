@@ -7,7 +7,8 @@ PROJECT_NAME=chatkbqa
 EXP_NAME=chatkbqa_7b
 # INIT_MODEL=meta-llama/Llama-2-7b-hf
 INIT_MODEL=meta-llama/Llama-3.2-3B-Instruct
-
+# ADAPTER=./sft_output/checkpoint-3500
+SFT_MODEL=./sft_merged_checkpoint
 
 DATE=$(date '+%Y-%m-%d-%H-%M-%S')
 
@@ -43,7 +44,7 @@ python3 -m verl.trainer.CUSTOM_main_ppo \
     trainer.test_freq=20 \
     trainer.project_name=$PROJECT_NAME \
     trainer.experiment_name=$EXP_NAME \
-    actor_rollout_ref.model.path=$INIT_MODEL \
+    actor_rollout_ref.model.path=$SFT_MODEL \
     critic.model.path=$INIT_MODEL \
     trainer.default_local_dir=/dev/ana/training_outputs/${EXP_NAME} \
     trainer.total_epochs=5 2>&1 | tee exp_log/$PROJECT_NAME-7b-ppo-verl_demo.log 

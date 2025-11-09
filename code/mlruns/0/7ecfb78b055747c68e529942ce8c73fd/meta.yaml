@@ -1,0 +1,15 @@
+artifact_uri: file:///home/work/Raymond_Kim/ChatKBQA_RL/code/mlruns/0/7ecfb78b055747c68e529942ce8c73fd/artifacts
+end_time: 1762412280143
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 7ecfb78b055747c68e529942ce8c73fd
+run_name: capable-auk-759
+run_uuid: 7ecfb78b055747c68e529942ce8c73fd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762407113303
+status: 3
+tags: []
+user_id: work

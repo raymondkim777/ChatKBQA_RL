@@ -1,0 +1,15 @@
+artifact_uri: file:///home/work/Raymond_Kim/ChatKBQA_RL/code/mlruns/0/764a5fd86c764fb7867bdea460bd357a/artifacts
+end_time: 1762614715530
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 764a5fd86c764fb7867bdea460bd357a
+run_name: ./sft_output
+run_uuid: 764a5fd86c764fb7867bdea460bd357a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762605771581
+status: 3
+tags: []
+user_id: work

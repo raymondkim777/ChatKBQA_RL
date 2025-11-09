@@ -164,7 +164,7 @@ def compute_score(solution_str, ground_truth, format_reward=0.1):
     #     print(f"Format score: {format_score}")
     
     if do_print:
-        print(f"--------------------------------")
+        print(f"-------------This is ChatKBQA-------------------")
         # schema = extract_database_schema(solution_str)
         # print(f"Database Schema: {schema}")
         print(f"Solution string: {solution_str}")

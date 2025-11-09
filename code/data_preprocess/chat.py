@@ -8,15 +8,15 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
-INSTRUCTION = """
+INSTRUCTION = """<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n"""
+INSTRUCTION_USER_1 = """
 You are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.
 """
 
 
 def make_prefix(example):
 
-    input_str = """<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n""" + INSTRUCTION
-    input_str += """The Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.
+    input_str = INSTRUCTION + INSTRUCTION_USER_1 + """The Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.
 For example:
 <think>
 [thinking process]
@@ -33,7 +33,7 @@ Note: The query should be an S-expression logical form.
 Here's the user query:
 """
 
-    input_str += example['input'] + """<|im_end|>
+    input_str += example['input'] + """\n<|im_end|>
 <|im_start|>assistant
 Let me write the S-expression query with reasoning. 
 <think>
@@ -74,6 +74,7 @@ if __name__ == '__main__':
     test_dataset = Dataset.from_list(test_data)
 
 
+
     def make_map_fn(split):
         def process_fn(example, idx):
             question = make_prefix(example)
@@ -82,10 +83,12 @@ if __name__ == '__main__':
             }
             data = {
                 "data_source": data_source,
-                "prompt": [{
-                    "role": "user",
-                    "content": question,
-                }],
+                "prompt": [
+                    {
+                        "role": "user",
+                        "content": question,
+                    },
+                ],
                 "ability": "knowledgebase_retrieval",
                 "reward_model": {
                     "style": "rule",

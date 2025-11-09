@@ -909,7 +909,7 @@ class RayPPOTrainer(object):
                     # compute values
                     if self.use_critic:
                         with _timer('values', timing_raw):
-                            values = self.i_wg.compute_values(batch)
+                            values = self.critic_wg.compute_values(batch)
                             batch = batch.union(values)
 
                     with _timer('adv', timing_raw):
@@ -956,8 +956,9 @@ class RayPPOTrainer(object):
                         actor_output_metrics = reduce_metrics(actor_output.meta_info['metrics'])
                         metrics.update(actor_output_metrics)
 
-                    # reward
-                    if 'scifact'in self.config.data.train_files or 'fiqa' in self.config.data.train_files or 'nfcorpus' in self.config.data.train_files \
+                    # reward 
+                    # ! ADDED WebQSP
+                    if 'WebQSP' in self.config.data.train_files or 'scifact'in self.config.data.train_files or 'fiqa' in self.config.data.train_files or 'nfcorpus' in self.config.data.train_files \
                         or 'hotpotqa' in self.config.data.train_files or 'fever' in self.config.data.train_files or 'msmarco_beir' in self.config.data.train_files:
                         reward_metrics = compute_reward_metrics_ndcg(batch)
                     elif 'msmarco' in self.config.data.train_files:

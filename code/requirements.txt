@@ -2,7 +2,8 @@ accelerate
 codetiming
 datasets
 dill
-flash-attn
+# flash-attn
+# https://github.com/Dao-AILab/flash-attention/releases/download/v2.5.9.post1/flash_attn-2.5.9.post1+cu118torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl 
 hydra-core
 numpy
 pandas
@@ -10,5 +11,6 @@ pybind11
 ray
 tensordict<0.6
 transformers<4.48
-vllm<=0.6.3
+#vllm<=0.6.3
 wandb
+trl

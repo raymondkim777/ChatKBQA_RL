@@ -138,3 +138,7 @@ tests/e2e/toy_examples/deepspeed/synchronous/output.txt
 *.swp
 
 *.ipynb
+
+# CUSTOM
+sft_output
+sft_merged_checkpoint
