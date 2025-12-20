@@ -1,0 +1,1 @@
+kill $(< logs/save_pid.txt)

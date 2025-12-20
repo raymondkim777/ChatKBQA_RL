@@ -248,6 +248,12 @@ def main_task(config):
         padding_side="right", # training with left-padded tensors in fp16 precision may cause overflow
         **config_kwargs
     )
+    
+    # ! ADDED
+    # ensure pad token exists and make workers use the same remote-code flag
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+    # ! ADD END
 
     # define worker classes
     if config.actor_rollout_ref.actor.strategy == 'fsdp':

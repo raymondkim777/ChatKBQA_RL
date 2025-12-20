@@ -23,7 +23,7 @@ def extract_solution(solution_str):
         processed_str = solution_str.split("<|im_start|>assistant", 1)[1].strip()
     else:
         print("[Error] Failed to locate model response header")
-        return None, processed_str
+        return None, ""
 
     # Regular expression to find the last occurrence of <answer>...</answer>
     answer_pattern = r'<answer>(.*?)</answer>'
@@ -114,19 +114,32 @@ def check_json_format(json_str, do_print=False):
 def calculate_answer_score(pred_sexpr, answer_entity, do_print=False):
     """Calculate answer score based on final_prediction idx."""
 
-    response = requests.post(API_LINK, json={'query': pred_sexpr})
+    # post porcess pred_sexpr to add _ before ,
+    new_pred_sexpr = re.sub(r'(?<!\s),',' ,',pred_sexpr)
+    if do_print:
+        print(f"New SEXPR: {new_pred_sexpr}")
 
+    response = requests.get(API_LINK, params={'query': new_pred_sexpr})
+    
     # if API has error, returns empty JSON object (CHECK)
-    if 'retrieved' not in response.json().keys():
+    if response.status_code != 200:
+        if do_print:
+            print(f"[Error] Response Status {response.status_code} for SEXPR {pred_sexpr}")
+        answers = []
+        answer_score = 0
+    elif 'retrieved' not in response.json().keys():
         if do_print:
             print(f"[Error] Error in executing SEXPR: {pred_sexpr}")
         answers = []
         answer_score = 0
     else:
         answers = response.json()['retrieved']
-        if answer_entity in answers:
+        entity_list = list(answer_entity)
+        mask = np.isin(answers, entity_list)
+
+        answer_idx = np.argmax(mask) if mask.any() else None
+        if answer_idx is not None:
             answer_score = 1
-            answer_idx = answers.index(answer_entity)
             answer_score += 1 / (answer_idx + 1)
         else:
             answer_score = 0

@@ -2,7 +2,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer
 from peft import PeftModel
 
 base_model = "meta-llama/Llama-3.2-3B-Instruct"
-adaper_path = './sft_output/checkpoint-3500'
+adaper_path = './sft_output/checkpoint-4000'
 save_path = './sft_merged_checkpoint'
 
 model = AutoModelForCausalLM.from_pretrained(

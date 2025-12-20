@@ -1,0 +1,507 @@
+[
+    {
+        "NLQues": "where did theodor schwann get his education",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did bristol palin go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who played on the jeffersons",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where obama went to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did sir ernest rutherford go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who plays captain kirk in star trek",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where does lil wayne go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did clay matthews go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what did drew barrymore go to rehab for",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did karl benz go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did rob kardashian go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did robert downey jr go to jail",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what did mark zuckerberg study",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where does airtran airways fly",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what political party does barack obama represent",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did ben roethlisberger go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what awards gary paulsen won",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who played barbara gordon batgirl",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what has kristen stewart acted in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who plays harley quinn",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what schools did anders celsius attend",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what party does barack obama belong to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what new movies is robert pattinson in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what other movies has ryan gosling been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did douglas macarthur go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what does lauren conrad major in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what political party did andrew johnson belong to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who would play luke skywalker",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who played maggie in himym",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what district does nancy pelosi represent",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what did joe biden study in college",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what has charlie hunnam been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what films has daniel craig been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did anne frank go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what was jesse owens education",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who does don draper gets engaged to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did robert f kennedy go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who did john kennedy have affairs with",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies did morgan freeman star in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what all movies has taylor lautner been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies gerard butler has been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what offices did theodore roosevelt hold",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies has liam hemsworth played in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what wars did robert e lee served in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did jrr tolkien go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what political party was hitler in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what party was abe lincoln part of",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what else has jennifer lawrence played in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what are all the movies taylor swift has been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who was demi lovato dating",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies have robert pattinson in them",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who plays donna noble",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who will play mr gray in the film",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did robin williams get married",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies did joan crawford play in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did michael jordan attend",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what degree did martin luther king earn",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did miley cyrus",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did mark zuckerberg attend",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who did scarlett johansson date",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who plays kenneth",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what country did benito mussolini govern",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies does nick cannon play in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what did stephen hawking study",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did theodor schwann study",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what drugs lindsay lohan abuse",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what celebrities has brody jenner dated",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what degrees does romney have",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies has carmen electra been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school does james franco go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did hugo chavez go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who won the league cup in 2002",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies has miley cyrus been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did harry s truman go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies queen latifah is in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies does matt dallas play in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did paula deen go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what other movies is josh hutcherson in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what electorate does anna bligh represent",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who played harry potter dumbledore actor",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies did nick cannon star in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what films has scarlett johansson been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who did ben stiller date",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did benjamin franklin went to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did sanjay gupta go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what school did wilfred owen go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what political party is jerry brown",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what has ashley greene been in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what did niels bohr discover about the atomic structure",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did mario lopez go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where did george michael go to school",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "where was benjamin franklin educated",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies does logan lerman play in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what degrees did barack obama get",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what movies did tupac star in",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who played kirk",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what team did adrian peterson play for in college",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "who plays stanley hudson",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what schools did sir isaac newton go to",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "which political party does barack obama represent",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    },
+    {
+        "NLQues": "what degrees did obama get in college",
+        "pred_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )",
+        "gold_s": "( JOIN ( R rel ) ( JOIN ( R rel ) ent ) )"
+    }
+]

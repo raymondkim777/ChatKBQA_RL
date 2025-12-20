@@ -1,0 +1,137 @@
+[
+    {
+        "question": "who influenced samuel taylor coleridge",
+        "generated": "system\n\nCutting Knowledge Date: December 2023\nToday Date: 12 Nov 2025\n\nuser\n\n<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.\nThe Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.\nFor example:\n<think>\n[thinking process]\n</think>\n<answer>\n{\n    \"query\": [s-expression logical form]\n} \n</answer>. \nNote: The query should be an S-expression logical form.\n\nHere's the user query:\nwho influenced samuel taylor coleridge\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>assistant\n\nI should start my reasoning here. </think><answer>\n        {\n            \"influenced\": [\n                {\n                    \"type\": \"influence\",\n                    \"from\": \"Samuel Taylor Coleridge\",\n                    \"to\": \"influenced\"\n                }\n            ]\n        }\n        </answer>",
+        "gold_label": {
+            "ID": "WebQTest-1198",
+            "question": "who influenced samuel taylor coleridge",
+            "comp_type": null,
+            "answer": [
+                "m.015_hb",
+                "m.015n8",
+                "m.017m4j",
+                "m.0182w0",
+                "m.01gnng",
+                "m.03sbs",
+                "m.0448r",
+                "m.081k8",
+                "m.09482",
+                "m.0nld"
+            ],
+            "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.078w2)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.078w2 ns:influence.influence_node.influenced_by ?x .\n}\n",
+            "sexpr": "(JOIN (R influence.influence_node.influenced_by) m.078w2)",
+            "normed_sexpr": "( JOIN ( R [ influence , influence node , influenced by ] ) [ Samuel Taylor Coleridge ] )",
+            "gold_entity_map": {
+                "m.078w2": "Samuel Taylor Coleridge"
+            },
+            "gold_relation_map": {
+                "influence.influence_node.influenced_by": "influence , influence node , influenced by"
+            },
+            "gold_type_map": {}
+        }
+    },
+    {
+        "question": "what were amelia earhart 's achievements",
+        "generated": "system\n\nCutting Knowledge Date: December 2023\nToday Date: 12 Nov 2025\n\nuser\n\n<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.\nThe Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.\nFor example:\n<think>\n[thinking process]\n</think>\n<answer>\n{\n    \"query\": [s-expression logical form]\n} \n</answer>. \nNote: The query should be an S-expression logical form.\n\nHere's the user query:\nwhat were amelia earhart's achievements\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>assistant\n\nI should start my reasoning here. </think><answer>\n        {\n            \"achievements\": \" Amelia Earhart was a pioneering American aviator who set several aviation records and became the first woman to fly solo across the Atlantic Ocean in 1932. She also flew around the world in 1937, becoming the first person to do so. She was also a vocal advocate for women's rights and equality. \"\n        }\n        </answer>",
+        "gold_label": {
+            "ID": "WebQTest-301",
+            "question": "what were amelia earhart 's achievements",
+            "comp_type": null,
+            "answer": [
+                "m.0cbd2",
+                "m.0hltv"
+            ],
+            "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.0lngf)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.0lngf ns:people.person.profession ?x .\n}\n",
+            "sexpr": "(JOIN (R people.person.profession) m.0lngf)",
+            "normed_sexpr": "( JOIN ( R [ people , person , profession ] ) [ Amelia Earhart ] )",
+            "gold_entity_map": {
+                "m.0lngf": "Amelia Earhart"
+            },
+            "gold_relation_map": {
+                "people.person.profession": "people , person , profession"
+            },
+            "gold_type_map": {}
+        }
+    },
+    {
+        "question": "what awards did marilyn monroe won",
+        "generated": "system\n\nCutting Knowledge Date: December 2023\nToday Date: 12 Nov 2025\n\nuser\n\n<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.\nThe Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.\nFor example:\n<think>\n[thinking process]\n</think>\n<answer>\n{\n    \"query\": [s-expression logical form]\n} \n</answer>. \nNote: The query should be an S-expression logical form.\n\nHere's the user query:\nwhat awards did marilyn monroe won\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>assistant\n\nI should start my reasoning here. </think><answer>\n        {\n            \" Awards \": [\n                {\n                    \" award \": \" awards \",\n                    \" type \": \" award \"\n                }\n            ]\n        }\n        </answer>",
+        "gold_label": {
+            "ID": "WebQTest-1305",
+            "question": "what awards did marilyn monroe won",
+            "comp_type": null,
+            "answer": [
+                "m.019f6s",
+                "m.02kgb7",
+                "m.0c1fs8r",
+                "m.0l_d69j"
+            ],
+            "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.04wqr)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.04wqr ns:award.award_winner.awards_won ?y .\n?y ns:award.award_honor.award ?x .\n}\n",
+            "sexpr": "(JOIN (R award.award_honor.award) (JOIN (R award.award_winner.awards_won) m.04wqr))",
+            "normed_sexpr": "( JOIN ( R [ award , award honor , award ] ) ( JOIN ( R [ award , award winner , awards won ] ) [ Marilyn Monroe ] ) )",
+            "gold_entity_map": {
+                "m.04wqr": "Marilyn Monroe"
+            },
+            "gold_relation_map": {
+                "award.award_winner.awards_won": "award , award winner , awards won",
+                "award.award_honor.award": "award , award honor , award"
+            },
+            "gold_type_map": {}
+        }
+    },
+    {
+        "question": "what was nikola tesla inventions",
+        "generated": "system\n\nCutting Knowledge Date: December 2023\nToday Date: 12 Nov 2025\n\nuser\n\n<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.\nThe Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.\nFor example:\n<think>\n[thinking process]\n</think>\n<answer>\n{\n    \"query\": [s-expression logical form]\n} \n</answer>. \nNote: The query should be an S-expression logical form.\n\nHere's the user query:\nwhat was nikola tesla inventions\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>assistant\n\nI should start my reasoning here. </think><answer>\n        {\n            \"inventions\": \"Nikola Tesla inventions\"\n        }\n        </answer>",
+        "gold_label": {
+            "ID": "WebQTest-246",
+            "question": "what was nikola tesla inventions",
+            "comp_type": null,
+            "answer": [
+                "m.01s499",
+                "m.02p196m",
+                "m.08262",
+                "m.09pf_",
+                "m.09rh1",
+                "m.0bt33",
+                "m.0qjjc"
+            ],
+            "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.05d1y)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.05d1y ns:law.inventor.inventions ?x .\n}\n",
+            "sexpr": "(JOIN (R law.inventor.inventions) m.05d1y)",
+            "normed_sexpr": "( JOIN ( R [ law , inventor , inventions ] ) [ Nikola Tesla ] )",
+            "gold_entity_map": {
+                "m.05d1y": "Nikola Tesla"
+            },
+            "gold_relation_map": {
+                "law.inventor.inventions": "law , inventor , inventions"
+            },
+            "gold_type_map": {}
+        }
+    },
+    {
+        "question": "what inspired michelangelo buonarroti",
+        "generated": "system\n\nCutting Knowledge Date: December 2023\nToday Date: 12 Nov 2025\n\nuser\n\n<|im_start|>system\nYou are a helpful Assistant. The User asks a question, and the Assistant solves it. The Assistant first thinks about the reasoning process in the mind and then provides the User with the answer.<|im_end|>\n<|im_start|>user\n\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.\nThe Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.\nFor example:\n<think>\n[thinking process]\n</think>\n<answer>\n{\n    \"query\": [s-expression logical form]\n} \n</answer>. \nNote: The query should be an S-expression logical form.\n\nHere's the user query:\nwhat inspired michelangelo buonarroti\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>assistant\n\nI should start my reasoning here. </think><answer>\n        {\n            \"inspiration\": [\n                {\n                    \"type\": \"influence\",\n                    \"influenced_by\": [\n                        \"Michelangelo Buonarroti\"\n                    ]\n                }\n            ]\n        }\n        </answer>",
+        "gold_label": {
+            "ID": "WebQTest-1419",
+            "question": "what inspired michelangelo buonarroti",
+            "comp_type": null,
+            "answer": [
+                "m.013w_3",
+                "m.01cc3w",
+                "m.04qj5",
+                "m.072cpw",
+                "m.0d8wb",
+                "m.0j56d"
+            ],
+            "sparql": "PREFIX ns: <http://rdf.freebase.com/ns/>\nSELECT DISTINCT ?x\nWHERE {\nFILTER (?x != ns:m.058w5)\nFILTER (!isLiteral(?x) OR lang(?x) = '' OR langMatches(lang(?x), 'en'))\nns:m.058w5 ns:influence.influence_node.influenced_by ?x .\n}\n",
+            "sexpr": "(JOIN (R influence.influence_node.influenced_by) m.058w5)",
+            "normed_sexpr": "( JOIN ( R [ influence , influence node , influenced by ] ) [ Michelangelo ] )",
+            "gold_entity_map": {
+                "m.058w5": "Michelangelo"
+            },
+            "gold_relation_map": {
+                "influence.influence_node.influenced_by": "influence , influence node , influenced by"
+            },
+            "gold_type_map": {}
+        }
+    }
+]

@@ -5,6 +5,11 @@ from components.utils import load_json
 from tqdm import tqdm
 
 
+INSTRUCTION_USER_0 = """<|im_start|>user\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.
+The Assistant should consider which logical form skeleton best matches the logical relationship of the user query, and justify the best one. The Assistant should clearly reason through why the chosen relations are necessary, and how many times to use each relation. The Assistant should consider varying levels of logical form complexity, and justify which complexity best matches the user query.
+"""
+
+
 INSTRUCTION_USER_1 = """The Assistant should show their thinking process in <think> </think> tags. The Assistant should return the final answer in JSON format in <answer> </answer> tags.
 For example:
 <think>
@@ -17,12 +22,6 @@ For example:
 </answer>. 
 Note: The query should be an S-expression logical form.
 Here's the user query:"""
-
-INSTRUCTION_USER_2 = """\n<|im_end|>
-<|im_start|>assistant
-Let me write the S-expression query with reasoning. 
-<think>
-"""
 
 
 def load_data(split, args):
@@ -58,11 +57,11 @@ def prepare_dataloader(args,split):
     
     for cnt, item in tqdm(enumerate(examples)):
         question=item['question']
-        user = instruction + "<|im_start|>user\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base." + INSTRUCTION_USER_1 + item['question'] + INSTRUCTION_USER_2     
+        user = instruction + INSTRUCTION_USER_0 + INSTRUCTION_USER_1 + item['question'] + INSTRUCTION_USER_2     
         output = item['normed_sexpr']
         assistant = """I should start my reasoning here. </think><answer>
         {
-            "query": " """ + output + """ "
+            "query": \"""" + output + """\"
         }
         </answer>"""
         
@@ -72,7 +71,7 @@ def prepare_dataloader(args,split):
             json_user, json_assistant
         ]}
         json_data.append(json_final)
-               
+
     
     output_dir = 'data/ChatKBQA/{}/{}.json'.format(args.dataset_type, split)
 

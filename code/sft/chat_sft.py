@@ -4,6 +4,60 @@ from trl import SFTConfig, SFTTrainer
 from trl.models.utils import setup_chat_format
 from peft import LoraConfig
 import torch
+import re
+
+
+def tokenize_mask(data):
+    global tokenizer
+    text = tokenizer.apply_chat_template(data['messages'], tokenize=False, add_generation_prompt=True)
+    # print("TEXT:\n", text)
+
+    enc = tokenizer(
+        text,
+        return_tensors=None,
+        return_offsets_mapping=True,
+        add_special_tokens=True,
+        # truncation=True,
+        max_length=training_args.max_seq_length,
+    )
+
+    input_ids = enc["input_ids"]
+    attention_mask = enc['attention_mask']
+    offsets = enc['offset_mapping']
+
+    labels = input_ids.copy()
+
+    #start_char = text.index("<think>") + len("<think>")
+    #end_char =  text.index("</think>")
+    for m in re.finditer(r'<think>(.*?)</think>',text,flags=re.DOTALL):
+        start_char = m.start(1)
+        end_char = m.end(1)
+        header_spans = []
+        for h in re.finditer(r"<|eot_id|><|start_header_id|>assistant<|end_header_id|>",text):
+            header_spans.append(h.span())
+        for i, (s,e) in enumerate(offsets):
+            if s == -1 or e ==-1 or s>= end_char or e <= start_char:
+                continue
+    
+            inside_h = False
+            for hs, he in header_spans:
+                if not (e <= hs or s >= he):
+                    inside_h = True
+                    break
+            
+            if inside_h:
+                continue
+            
+            labels[i] = -100
+    
+    item = {
+        'input_ids' : input_ids,
+        'attention_mask' : attention_mask,
+        'labels' : labels,
+    }
+    # print("ITEM:\n", item)
+    return item
+
 
 MODEL_NAME="meta-llama/Llama-3.2-3B-Instruct"
 
@@ -12,13 +66,16 @@ MODEL_NAME="meta-llama/Llama-3.2-3B-Instruct"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # Load dataset
-data_files = {"train": "data/ChatKBQA/WebQSP/train.json", "test": "data/ChatKBQA/WebQSP/test.json"}
+data_files = {"train": "data/ChatKBQA/WebQSP/cold_start/train.json", "test": "data/ChatKBQA/WebQSP/cold_start/test.json"}
 dataset = load_dataset("json", data_files=data_files)
 print(dataset)
 
 # # Configure model and tokenizer
 model = AutoModelForCausalLM.from_pretrained(pretrained_model_name_or_path=MODEL_NAME).to("cuda")
-
+tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+# Llama3.* uses chat templates — keep the special tokens
+if tokenizer.pad_token is None:
+    tokenizer.pad_token = tokenizer.eos_token
 
 # Configure LoRA parameters (identical to ChatKBQA)
 # r: rank dimension for LoRA update matrices (smaller = more compression)
@@ -41,8 +98,9 @@ peft_config = LoraConfig(
 training_args = SFTConfig(
     output_dir="./sft_output",
     # max_steps=1000,
+    max_length=None,
     num_train_epochs=30.0,
-    # num_train_epochs=1.0,
+    # num_train_epochs=5.0,
     per_device_train_batch_size=4,
     gradient_accumulation_steps=4,
     lr_scheduler_type="cosine", 
@@ -62,8 +120,23 @@ training_args = SFTConfig(
 # --learning_rate 5e-5 
 # --num_train_epochs 100.0 
 
+# tokenized_dataset = dataset.map(
+#     tokenize_mask,
+#     remove_columns = dataset['train'].column_names,
+# )
 
-# Initialize trainer
+# # Initialize trainer
+# trainer = SFTTrainer(
+#     model=model,
+#     args=training_args,
+#     train_dataset=tokenized_dataset["train"],
+#     eval_dataset=tokenized_dataset["test"],
+#     peft_config=peft_config,  # LoRA configuration
+#     # max_seq_length=max_seq_length,  # Maximum sequence length
+#     # processing_class=tokenizer,
+# )
+
+# Initialize Trainer
 trainer = SFTTrainer(
     model=model,
     args=training_args,
@@ -71,7 +144,7 @@ trainer = SFTTrainer(
     eval_dataset=dataset["test"],
     peft_config=peft_config,  # LoRA configuration
     # max_seq_length=max_seq_length,  # Maximum sequence length
-    # processing_class=tokenizer,
+    processing_class=tokenizer,
 )
 
 # Start training

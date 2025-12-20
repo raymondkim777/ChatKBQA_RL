@@ -398,7 +398,7 @@ class ActorRolloutRefWorker(Worker):
         return output
 
     @register(dispatch_mode=Dispatch.DP_COMPUTE_PROTO)
-    def generate_sequences(self, prompts: DataProto):
+    def generate_sequences(self, prompts: DataProto): 
         prompts = prompts.to('cuda')
         # set to False if it is validation
         recompute_log_prob = prompts.meta_info.get('recompute_log_prob', True)
@@ -950,7 +950,7 @@ class RewardModelWorker(Worker):
             chat.append({'role': 'assistant', 'content': response})
 
             prompt_with_chat_template = target_tokenizer.apply_chat_template(chat,
-                                                                             add_generation_prompt=False,
+                                                                             add_generation_prompt=True, # ! CHANGED to True
                                                                              tokenize=False)
             if self.rank == 0 and i == 0:
                 # for debugging purpose

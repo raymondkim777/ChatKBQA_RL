@@ -4,15 +4,15 @@ export CUDA_VISIBLE_DEVICES=0
 
 PROJECT_NAME=chatkbqa
 
-EXP_NAME=chatkbqa_3_2_3b_instruct
+EXP_NAME=chatkbqa_7b
 # INIT_MODEL=meta-llama/Llama-2-7b-hf
 INIT_MODEL=meta-llama/Llama-3.2-3B-Instruct
-# ADAPTER=./sft_output/checkpoint-3500
+# ADAPTER=./sft_output/checkpoint-4000
 SFT_MODEL=./sft_merged_checkpoint
 
 DATE=$(date '+%Y-%m-%d-%H-%M-%S')
 
-python3 -m verl.trainer.CUSTOM_main_ppo \
+nohup python3 -m verl.trainer.CUSTOM_main_ppo \
     data.train_files=data/ChatKBQA/WebQSP/train.parquet \
     data.val_files=data/ChatKBQA/WebQSP/test_full.parquet \
     data.train_batch_size=64 \
@@ -46,9 +46,9 @@ python3 -m verl.trainer.CUSTOM_main_ppo \
     trainer.experiment_name=$EXP_NAME \
     actor_rollout_ref.model.path=$SFT_MODEL \
     critic.model.path=$INIT_MODEL \
-    trainer.default_local_dir=/dev/ana/training_outputs/${EXP_NAME} \
-    trainer.total_epochs=5 2>&1 | tee exp_log/$PROJECT_NAME-3-2-3b-ppo-verl_demo.log 
+    trainer.default_local_dir=dev/ana/training_outputs/${EXP_NAME} \
+    trainer.total_epochs=5 >> exp_log/$PROJECT_NAME-7b-ppo-verl_demo.log 2>&1 &
 
-
+echo $! > save_pid.txt
 # trainer.logger=['wandb'] \
 # tee exp_log/$PROJECT_NAME-7b-ppo-verl_demo_$DATE.log 

@@ -35,6 +35,9 @@ from verl.single_controller.ray.base import create_colocated_worker_cls
 from verl.trainer.ppo import core_algos
 from verl.utils.seqlen_balancing import get_seqlen_balanced_partitions, log_seqlen_unbalance
 
+import verl.utils.torch_functional as verl_F
+from verl.utils.model import compute_position_id_with_mask
+
 WorkerType = Type[Worker]
 
 
@@ -877,7 +880,9 @@ class RayPPOTrainer(object):
                 timing_raw = {}
 
                 batch: DataProto = DataProto.from_single_dict(batch_dict)
-
+                # print("BATCH:", batch)
+                # batch = self.apply_chat_template_and_tokenize_prompts(batch)
+                
                 # pop those keys for generation
                 gen_batch = batch.pop(batch_keys=['input_ids', 'attention_mask', 'position_ids'])
 
@@ -1003,3 +1008,44 @@ class RayPPOTrainer(object):
                         pprint(f'Final validation metrics: {val_metrics}')
                         logger.log(data=val_metrics, step=self.global_steps)
                     return
+
+
+    def apply_chat_template_and_tokenize_prompts(self, batch: DataProto) -> DataProto:
+            # print("RECEIVED BATCH:", batch)
+            # prompts = batch.pop(batch_keys=['input_ids', 'attention_mask', 'position_ids'])
+            actor_rollout_ref_config = self.config.actor_rollout_ref
+            src_max_length = batch.batch['attention_mask'].shape[-1]
+
+            tokenizer = self.tokenizer
+            input_ids_list = []
+            attention_mask_list = []
+
+            for i in range(batch.batch.batch_size[0]):
+                # print("Prompt:", batch)
+                # print("Prompt non_tensor_batch:", batch.non_tensor_batch)
+
+                chat: list = batch.non_tensor_batch['full_prompt'][i]
+                prompt_with_chat_template = tokenizer.apply_chat_template(chat, add_generation_prompt=True, tokenize=False)
+
+                max_length = actor_rollout_ref_config.get('max_length', src_max_length)
+                input_ids, attention_mask = verl_F.tokenize_and_postprocess_data(
+                    prompt=prompt_with_chat_template,
+                    tokenizer=tokenizer,
+                    max_length=max_length,
+                    pad_token_id=tokenizer.pad_token_id,
+                    left_pad=False,
+                    truncation=actor_rollout_ref_config.rollout.get('truncation', 'right')
+                )
+                input_ids_list.append(input_ids)
+                attention_mask_list.append(attention_mask)
+
+            input_ids = torch.cat(input_ids_list, dim=0)
+            attention_mask = torch.cat(attention_mask_list, dim=0)
+            position_ids = compute_position_id_with_mask(attention_mask)
+            batch.batch['input_ids'] = input_ids
+            batch.batch['attention_mask'] = attention_mask
+            batch.batch['position_ids'] = position_ids
+            return batch
+    
+            # inputs = {'input_ids': input_ids, 'attention_mask': attention_mask, 'position_ids': position_ids}
+            # return DataProto.from_dict(inputs)
