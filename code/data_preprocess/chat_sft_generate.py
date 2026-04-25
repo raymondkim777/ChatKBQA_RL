@@ -31,8 +31,8 @@ rl_data = [df.iloc[i] for i in range(len(df))]
 print(len(rl_data))
 print(rl_data[0])
 
-sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'train.json')
-# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
+sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'train.jsonl')
+# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'test.jsonl')
 sft_data = []
 
 
@@ -79,7 +79,9 @@ for item in tqdm(rl_data):
 
 # save the data
 with open(sft_data_path, 'w') as f:
-    for D in sft_data:
-        f.write(json.dumps(D) + '\n')
+    # JSON File:
+    f.write(json.dumps(sft_data, indent=4))
 
-
+    # # JSONL File:
+    # for D in sft_data:
+    #     f.write(json.dumps(D) + '\n')

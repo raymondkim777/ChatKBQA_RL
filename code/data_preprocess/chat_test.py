@@ -9,11 +9,11 @@ def open_write_file(dir_path, file_name):
     return file_path
 
 
-sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'train.json')
-# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
+sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt1', 'train.jsonl')
+# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt1', 'test.jsonl')
 
-new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start1', 'train.json')
-# new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start1', 'test.json')
+new_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'train.json')
+# new_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'test.json')
 
 
 json_list = []

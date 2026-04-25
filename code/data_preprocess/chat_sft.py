@@ -15,11 +15,11 @@ rl_data_parquet_path = f'data/ChatKBQA/WebQSP/test_full.parquet'
 df = pd.read_parquet(rl_data_parquet_path)
 rl_data = [df.iloc[i] for i in range(len(df))]
 
-# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'train.json')
-sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'test.json')
+sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'train.json')
+# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'test.json')
 
-# new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'train.json')
-new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
+new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'train.json')
+# new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
 
 
 json_list = []

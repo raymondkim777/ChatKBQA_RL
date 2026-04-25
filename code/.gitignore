@@ -24,7 +24,8 @@ dense_index
 patches
 
 # data
-# data
+data/ChatKBQA/WebQSP/cold_start
+data/ChatKBQA/CWQ/cold_start
 
 # corpus
 collection_800k.tsv
