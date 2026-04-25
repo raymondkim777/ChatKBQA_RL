@@ -23,16 +23,16 @@ def open_write_file(dir_path, file_name):
     return file_path
 
 
-# rl_data_parquet_path = f'data/ChatKBQA/WebQSP/train.parquet'
-rl_data_parquet_path = f'data/ChatKBQA/WebQSP/test_full.parquet'
+rl_data_parquet_path = f'data/ChatKBQA/WebQSP/train.parquet'
+# rl_data_parquet_path = f'data/ChatKBQA/WebQSP/test_full.parquet'
 df = pd.read_parquet(rl_data_parquet_path)
 rl_data = [df.iloc[i] for i in range(len(df))]
 
 print(len(rl_data))
 print(rl_data[0])
 
-# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'train.json')
-sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
+sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'train.json')
+# sft_data_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
 sft_data = []
 
 
