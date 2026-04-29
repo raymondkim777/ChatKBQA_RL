@@ -6,6 +6,9 @@ import sys
 from transformers import AutoTokenizer
 
 
+# ORDER: chat.py (RL) --> chat_sft_generate.py (GPT) --> chat_sft.py (SFT)
+
+
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
