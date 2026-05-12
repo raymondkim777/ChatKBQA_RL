@@ -3,7 +3,7 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
 base_id = "meta-llama/Llama-3.2-3B-Instruct"            # your base
-adapter_dir = "./sft_output/checkpoint-4000"            #path/to/your/model/or/name/on/hub
+adapter_dir = "./sft_output/checkpoint-2790"            #path/to/your/model/or/name/on/hub
 device = "cuda" 
 
 tokenizer = AutoTokenizer.from_pretrained(base_id)

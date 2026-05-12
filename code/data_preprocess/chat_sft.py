@@ -32,10 +32,10 @@ def generate_coldstart(dataset="WebQSP", split="train", type='json'):
     df = pd.read_parquet(rl_data_parquet_path)
     rl_data = [df.iloc[i] for i in range(len(df))]
 
-    gpt_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', f'{split}.json')
+    gpt_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', f'{split_parquet}.json')
     # sft_data_path = open_write_file('data/ChatKBQA/WebQSP/gpt', 'test.json')
 
-    new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', f'{split}.json')
+    new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', f'{split_parquet}.json')
     # new_path = open_write_file('data/ChatKBQA/WebQSP/cold_start', 'test.json')
 
 

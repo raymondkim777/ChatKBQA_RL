@@ -21,33 +21,45 @@ tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
 if tokenizer.pad_token is None:
     tokenizer.pad_token = tokenizer.eos_token
 
-INSTRUCTION = """<|im_start|>system\nYou are a helpful Assistant. The user asks a question, and you solve it. You first think about the reasoning process in the mind and then provide the user with the answer.<|im_end|>\n<|im_start|>user\n"""
-INSTRUCTION_USER_1 = """
-You are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base.
-"""
+
+# # PREVIOUS PROMPT
+
+# INSTRUCTION_SYSTEM = """<|im_start|>system\nYou are a helpful Assistant. The user asks a question, and you solve it. You first think about the reasoning process in the mind and then provide the user with the answer.<|im_end|>\n"""
+
+# INSTRUCTION_USER = """<|im_start|>user\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base. Show your thinking process in <think> </think> tags. Your final response must be in JSON format within <answer> </answer> tags. For example:
+# <answer>
+# {
+#     "query": [s-expression logical form]
+# } 
+# </answer>. 
+# Note: The query should be an S-expression logical form.\n
+# Here's the user query:\n"""
+
+# INSTRUCTION_ASSISTANT = """\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>\n"""
 
 
-def make_prefix(example):
+# NEW PROMPT
 
-    input_str = INSTRUCTION + INSTRUCTION_USER_1 + """Show your thinking process in <think> </think> tags. Your final response must be in JSON format within <answer> </answer> tags. For example:
+INSTRUCTION_SYSTEM = """<|im_start|>system\nYou are a helpful Assistant. The user asks a question, and you solve it. You first think about the reasoning process in the mind and then provide the user with the answer.<|im_end|>\n"""
+
+INSTRUCTION_USER = """<|im_start|>user\nYou are an S-expression logical form query writing expert. Your task is to write the S-expression logical form query for the user query to retrieve data from a RDF knowledge base. Show your thinking process in <think> </think> tags. Your final response must be in JSON format within <answer> </answer> tags. For example:
 <answer>
 {
     "query": [s-expression logical form]
 } 
 </answer>. 
-Note: The query should be an S-expression logical form.
-"""
+Note: The query should be an S-expression logical form. Every square bracket, round parentheses, and comma must have one space before and after.\n
+Here's the user query:\n"""
 
-    input_str += """
-Here's the user query:
-"""
+INSTRUCTION_ASSISTANT = """\n<|im_end|>\n<|im_start|>assistant\nLet me write the S-expression query with reasoning. \n<think>\n"""
 
-    input_str += example['input'] + """\n<|im_end|>
-<|im_start|>assistant
-Let me write the S-expression query with reasoning. 
-<think>
-"""
-    return input_str
+
+def make_prefix(example):
+    return INSTRUCTION_SYSTEM + INSTRUCTION_USER + example['input'] + INSTRUCTION_ASSISTANT
+    # input_str = INSTRUCTION_SYSTEM + INSTRUCTION_USER
+    # input_str += """\nHere's the user query:\n"""
+    # input_str += example['input'] + INSTRUCTION_ASSISTANT
+    # return input_str
 
 
 def load_json(fname, mode="r", encoding="utf8"):

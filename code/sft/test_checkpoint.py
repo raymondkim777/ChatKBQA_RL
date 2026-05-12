@@ -274,8 +274,9 @@ def check_all_checkpoints():
 
 
 if __name__ == "__main__":
-	check_all_checkpoints()
-	# test_lisp = "( JOIN ( R [ people, marriage, spouse ] ) ( TC ( AND ( JOIN [ people, marriage, type of union ] [ Marriage ] ) ( JOIN ( R [ people, person, spouse s ] ) [ Jane Wyman ] ) ) [ people, marriage, from ] NOW ) )"
-	# print(verify_lisp_string(test_lisp))
+	# check_all_checkpoints()
+	test_lisp = "( JOIN ( R [ people, marriage, spouse ] ) ( TC ( AND ( JOIN [ people, marriage, type of union ] [ Marriage ] ) ( JOIN ( R [ people, person, spouse s ] ) [ Jane Wyman ] ) ) [ people, marriage, from ] NOW ) )"
+	print(lisp_to_nested_expression(test_lisp))
+	print(verify_lisp_string(test_lisp))
 	
 
