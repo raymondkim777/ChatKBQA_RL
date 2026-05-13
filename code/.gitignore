@@ -141,5 +141,5 @@ tests/e2e/toy_examples/deepspeed/synchronous/output.txt
 *.ipynb
 
 # CUSTOM
-sft_output
+# sft_output
 sft_merged_checkpoint
